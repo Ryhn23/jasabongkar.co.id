@@ -1,6 +1,7 @@
-Thanks for downloading this template!
+jasabongkar.co.id
 
-Template Name: eNno
-Template URL: https://bootstrapmade.com/enno-free-simple-bootstrap-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Website resmi untuk layanan Jasa Bongkar Bangunan & Gedung
+---
+
+Website ini dibuat sebagai landing page untuk menampilkan informasi seputar layanan, pengalaman, kontak, serta galeri proyek-proyek pembongkaran yang telah dikerjakan.
+---
