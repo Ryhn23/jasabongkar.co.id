@@ -80,7 +80,37 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <section id="hero" class="hero section bg-hero">
+      <style>
+        .bg-hero {
+          background-image: url('/assets/img/bg-header.jpg');
+          /* Ganti ke path gambar kamu */
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          position: relative;
+          z-index: 1;
+          padding: 80px 0;
+        }
+
+        .bg-hero::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(255, 255, 255, 0.822);
+          /* Transparan putih */
+          z-index: 0;
+        }
+
+        .bg-hero .container {
+          position: relative;
+          z-index: 2;
+        }
+      </style>
+
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
@@ -94,48 +124,12 @@
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="100">
-            <img src="/assets/img/hero.png" class="img-fluid animated" alt="Jasa Bongkar Bangunan Jabodetabek">
+            <img src="/assets/img/hero.png" class="img-fluid" alt="Jasa Bongkar Bangunan Jabodetabek">
           </div>
         </div>
       </div>
     </section>
     <!-- /Hero Section -->
-
-    <!-- Featured Services Section -->
-    <section id="featured-services" class="featured-services section">
-      <div class="container">
-        <div class="row gy-4">
-
-          <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-building icon"></i></div>
-              <h4><a href="#" class="stretched-link">Bongkar Gedung & Rumah</a></h4>
-              <p>Spesialis pembongkaran gedung bertingkat, rumah tua, dan bangunan lainnya secara aman dan profesional.
-              </p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-tools icon"></i></div>
-              <h4><a href="#" class="stretched-link">Pemotongan Besi & Baja</a></h4>
-              <p>Melayani pemotongan rangka baja, struktur besi, dan material keras lainnya menggunakan alat berat.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-trash icon"></i></div>
-              <h4><a href="#" class="stretched-link">Pembersihan Puing</a></h4>
-              <p>Setelah pembongkaran, kami juga menangani pembersihan puing dan sampah konstruksi dengan rapi.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-        </div>
-      </div>
-    </section>
-
-    <!-- /Featured Services Section -->
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -150,7 +144,6 @@
         <div class="row gy-4">
           <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
             <img src="assets/img/about.png" class="img-fluid" alt="Tentang Jasa Bongkar Bangunan">
-            <a href="https://wa.me/628979669223" class="glightbox pulsating-play-btn" target="_blank"></a>
           </div>
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
             <h3>Solusi Terbaik untuk Pembongkaran Bangunan Anda</h3>
@@ -175,125 +168,69 @@
       </div>
     </section>
     <!-- /About Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Clients</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Projects</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Hours Of Support</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Workers</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-      </div>
-    </section><!-- /Stats Section -->
-
     <!-- Services Section -->
-    <section id="services" class="services section light-background">
+    <section id="services" class="services section light-background bg-hero">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <span>Layanan Kami</span>
         <h2>Layanan</h2>
         <p>Kami melayani pembongkaran bangunan secara menyeluruh, aman, dan efisien untuk wilayah Jabodetabek.</p>
-      </div><!-- End Section Title -->
-    
+      </div>
+      <!-- End Section Title -->
+
       <div class="container">
         <div class="row gy-4">
-    
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-house-door"></i>
-              </div>
-              <h3>Pembongkaran Rumah</h3>
-              <p>Jasa pembongkaran rumah tinggal, rumah tua, atau bangunan rusak dengan prosedur aman dan cepat.</p>
-            </div>
-          </div><!-- End Service Item -->
-    
+      
+          <!-- Pembongkaran Gedung -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-building"></i>
+            <div class="service-item text-center p-3" style="overflow: hidden;">
+              <div class="d-flex justify-content-center">
+                <video autoplay loop muted playsinline width="500" height="500" style="border-radius: 12px; max-width: 100%; height: auto; object-fit: cover;">
+                  <source src="/assets/video/service-1.mp4" type="video/mp4">
+                  Browser Anda tidak mendukung video.
+                </video>
               </div>
-              <h3>Pembongkaran Gedung</h3>
+              <h3>Jasa Pembongkaran Gedung</h3>
               <p>Spesialis pembongkaran gedung bertingkat atau bangunan komersial dengan alat berat dan tenaga profesional.</p>
             </div>
-          </div><!-- End Service Item -->
-    
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-hammer"></i>
+          </div>
+      
+          <!-- Pembongkaran Rumah -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item text-center p-3" style="overflow: hidden;">
+              <div class="d-flex justify-content-center">
+                <video autoplay loop muted playsinline width="500" height="500" style="border-radius: 12px; max-width: 100%; height: auto; object-fit: cover;">
+                  <source src="/assets/video/service-2.mp4" type="video/mp4">
+                  Browser Anda tidak mendukung video.
+                </video>
               </div>
-              <h3>Bongkaran Parsial</h3>
+              <h3>Jasa Pembongkaran Rumah</h3>
+              <p>Jasa pembongkaran rumah tinggal, rumah tua, atau bangunan rusak dengan prosedur aman dan cepat.</p>
+            </div>
+          </div>
+      
+          <!-- Bongkaran Parsial -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item text-center p-3" style="overflow: hidden;">
+              <div class="d-flex justify-content-center">
+                <video autoplay loop muted playsinline width="500" height="500" style="border-radius: 12px; max-width: 100%; height: auto; object-fit: cover;">
+                  <source src="/assets/video/service-3.mp4" type="video/mp4">
+                  Browser Anda tidak mendukung video.
+                </video>
+              </div>
+              <h3>Jasa Bongkaran Parsial</h3>
               <p>Bongkar sebagian seperti dinding, lantai, atau atap sesuai kebutuhan renovasi tanpa merusak struktur lain.</p>
             </div>
-          </div><!-- End Service Item -->
-    
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-recycle"></i>
-              </div>
-              <h3>Pembersihan Puing</h3>
-              <p>Setelah pembongkaran, kami juga menangani pengangkutan dan pembuangan puing dengan rapi dan bertanggung jawab.</p>
-            </div>
-          </div><!-- End Service Item -->
-    
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-truck"></i>
-              </div>
-              <h3>Pengangkutan Material</h3>
-              <p>Layanan tambahan untuk mengangkut material bekas bangunan seperti besi, kayu, dan beton menggunakan armada kami.</p>
-            </div>
-          </div><!-- End Service Item -->
-    
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-person-check"></i>
-              </div>
-              <h3>Konsultasi dan Survey Gratis</h3>
-              <p>Kami siap datang ke lokasi Anda untuk memberikan estimasi harga dan waktu pengerjaan tanpa biaya.</p>
-            </div>
-          </div><!-- End Service Item -->
-    
+          </div>
+      
         </div>
       </div>
+      
+      
     </section>
     <!-- /Services Section -->
+
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
@@ -602,13 +539,14 @@
           <div class="col-xl-10">
             <div class="text-center">
               <h3>Butuh Jasa Bongkar Bangunan?</h3>
-              <p>Kami siap membantu Anda dalam membongkar rumah, gedung, atau bangunan tua secara profesional dan aman. Hubungi kami untuk survei dan penawaran harga gratis!</p>
+              <p>Kami siap membantu Anda dalam membongkar rumah, gedung, atau bangunan tua secara profesional dan aman.
+                Hubungi kami untuk survei dan penawaran harga gratis!</p>
               <a class="cta-btn" href="https://wa.me/628979669223" target="_blank">Hubungi Sekarang</a>
             </div>
           </div>
         </div>
       </div>
-    </section>    
+    </section>
     <!-- /Call To Action Section -->
 
     <!-- Team Section -->
@@ -842,7 +780,8 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Jasabongkar.co.id</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Jasabongkar.co.id</strong> <span>All Rights
+          Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
@@ -853,7 +792,7 @@
       </div>
     </div>
 
-  </footer> 
+  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
