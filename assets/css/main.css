@@ -753,6 +753,41 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# WA Button
+--------------------------------------------------------------*/
+.wa-button {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 70px; /* Agar tidak tumpuk dengan scroll-top */
+  z-index: 99998;
+  background-color: var(--accent-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.wa-button i {
+  font-size: 24px;
+  color: var(--contrast-color);
+  line-height: 0;
+}
+
+.wa-button:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
+.wa-button.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 70px;
+}
+
+
+/*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
